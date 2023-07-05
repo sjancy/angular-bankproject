@@ -1,0 +1,31 @@
+<div class="col-md-8 offset-md-3">
+    <h3> Update Account</h3>
+    <form (ngSubmit)="onSubmit()">
+
+        <div class="form-group">
+            <label> Customer ID</label>
+            <input type="text" class="form-control" id="customerId" [(ngModel)]="account.customerId" name="customerId">
+        </div>
+
+        <div class="form-group">
+            <label> Account Balance</label>
+            <input type="text" class="form-control" id="accountBalance" [(ngModel)]="account.accountBalance"
+                name="accountBalance">
+        </div>
+
+
+        <div class="form-group">
+            <label>Created Date</label>
+            <input type="text" class="form-control" id="createdDate" [(ngModel)]="account.createdDate"
+                name="createdDate">
+        </div>
+
+
+        <div class="form-group">
+            <label> created By</label>
+            <input type="text" class="form-control" id="createdBy" [(ngModel)]="account.createdBy" name="createdBy">
+        </div>
+        <br>
+        <button class="btn btn-success" type="submit"> Submit</button>
+    </form>
+</div>

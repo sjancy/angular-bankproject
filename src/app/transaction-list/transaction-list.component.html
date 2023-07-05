@@ -1,0 +1,18 @@
+<h2>Transaction List</h2>
+<table class="table table-strpped">
+    <thead>
+        <tr>
+            <th> Account ID</th>
+            <th> Transaction Amount </th>
+            <th> Transcation Type </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let transaction of transactions">
+            <td> {{transaction.accountId}}</td>
+            <td> {{transaction.transactionAmount}}</td>
+            <td> {{transaction.transactionType}}</td>
+        </tr>
+    </tbody>
+
+</table>

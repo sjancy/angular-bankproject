@@ -1,0 +1,29 @@
+<h2>Account List</h2>
+<table class="table table-strpped">
+    <thead>
+        <tr>
+            <th>customer ID</th>
+            <th> AccountBalance </th>
+            <th> Created Date </th>
+            <th> Created By </th>
+            <th> Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let account of accounts">
+            <td> {{account.customerId}}</td>
+            <td> {{account.accountBalance}}</td>
+            <td> {{account.createdDate}}</td>
+            <td> {{account.createdBy}}</td>
+            <td>
+
+                <button (click)="updateaccount(account.accountId)" class="btn btn-info"> Update</button>
+                <button (click)="deleteaccount(account.accountId)" class="btn btn-danger" style="margin-left:10px">
+                    Delete</button>
+                <button (click)="viewaccount(account.accountId)" class="btn btn-info" style="margin-left:10px">
+                    View</button>
+            </td>
+        </tr>
+    </tbody>
+
+</table>
